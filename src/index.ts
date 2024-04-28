@@ -31,5 +31,6 @@ export default class App {
 
   private routes() {
     this.app.get("/hellow", (req, res) => res.json({ hello: "world!" }));
+    this.app.get("/new", (req, res) => res.json({ endpoint: "new" }));
   }
 }
