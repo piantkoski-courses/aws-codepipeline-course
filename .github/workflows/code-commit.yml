@@ -15,7 +15,8 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Git
-        run: git config --global --add safe.directory /github/workspace
+        run: |
+          chown -R $(id -u):$(id -g) $PWD
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
